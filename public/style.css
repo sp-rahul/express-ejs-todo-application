@@ -7,39 +7,13 @@
 body {
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
+	background: #e6f5ff;
 	
 }
 
-h1 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 36px;
-    color: #333;
-}
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
 
-th {
-    background-color: #f2f2f2;
-}
-
-.add-form {
-    width: 60%;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
 
 input[type="text"] {
     width: 100%;
@@ -61,13 +35,6 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-.del-btn {
-    background-color: #bb0000;
-}
-
-.del-btn:hover {
-    background-color: #e10c0c;
-}
 
 .add-btn {
     background-color: #03640f;
@@ -77,8 +44,13 @@ button[type="submit"] {
     background-color: #05b214;
 }
 
-.table-main {
-    display: flex;
+.add-form {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 /* Registation form style */
@@ -90,8 +62,8 @@ button[type="submit"] {
 	
 }
 .register_form {
-	background:#ff99ff;
-	padding: 15px 30px;
+	background: #ccccff;
+	padding: 25px 40px;
 	margin: 30px;
 	display:absolute;
 	
