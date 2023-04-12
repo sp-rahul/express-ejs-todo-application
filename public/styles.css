@@ -71,10 +71,22 @@ button[type="submit"] {
 
 .add-btn {
     background-color: #03640f;
+	
 }
 
 .add-btn:hover {
     background-color: #05b214;
+	
+}
+.logout-btn{
+	 background-color: #90040f;
+	 display:flex; 
+  justify-content:flex-end; 
+  align-items:center;
+}
+.logout-btn:hover{
+	background-color: orange;
+	
 }
 
 .table-main {
