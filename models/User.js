@@ -1,9 +1,5 @@
-const {Model, DataTypes} = require('sequelize');
-const sequelize = require('./register-db');
-const bcrypt = require('bcrypt')
-
-
-
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("./register-db");
 
 // module.exports = function(sequelize, DataTypes) {
 //     const User = sequelize.define('users', {
@@ -15,7 +11,7 @@ const bcrypt = require('bcrypt')
 // 		},
 // 		password: {
 // 			type: DataTypes.STRING
-// 		} 
+// 		}
 //     }, {
 //         freezeTableName: true,
 //         instanceMethods: {
@@ -33,22 +29,55 @@ const bcrypt = require('bcrypt')
 
 class User extends Model {}
 
-User.init({
-	username : {
-		type: DataTypes.STRING
-	},
-	email : {
-		type: DataTypes.STRING
-	},
-	password: {
-		type: DataTypes.STRING
-	} 
-}, {
-	sequelize,
-	modelName: 'user',
-	
-	
-	
-});
+User.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    username: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING,
+    },
+    password: {
+      type: DataTypes.STRING,
+    },
+  },
+  {
+    sequelize,
+    modelName: "user",
+  }
+);
 
-module.exports = User;
+class Todo extends Model {}
+
+Todo.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    item: {
+      type: DataTypes.STRING,
+    },
+    user_id: {
+      type: DataTypes.NUMBER,
+    },
+  },
+  {
+    sequelize,
+    modelName: "todo",
+  }
+);
+
+Todo.belongsTo(User, { foreignKey: 'user_id' });
+User.hasMany(Todo, { foreignKey: 'user_id' });
+
+module.exports = {
+  User,
+  Todo,
+};

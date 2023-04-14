@@ -78,16 +78,23 @@ button[type="submit"] {
     background-color: #05b214;
 	
 }
-.logout-btn{
-	 background-color: #90040f;
-	 display:flex; 
+.logout-container{
+	
+	display:flex; 
   justify-content:flex-end; 
   align-items:center;
+  margin-right: 80px;
 }
-.logout-btn:hover{
-	background-color: orange;
+.logout-btn{
+    background: #0077b3;
 	
 }
+
+.logout-btn:hover{
+    background: orange;
+	
+}
+
 
 .table-main {
     display: flex;

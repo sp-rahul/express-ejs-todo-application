@@ -10,10 +10,15 @@
 </head>
 <body>
 <h1>Todo List</h1>
+
+
 <form action="/logout" method="post" >
-<div >
-<button  type="submit" class="logout-btn" >logout</button>
+<div class="logout-container" >
+<button class="logout-btn" type="submit" >logout</button>
 </div>
+
+
+
 </form>
 
 
@@ -30,10 +35,10 @@
         <% for (let i = 0; i < todos.length; i++) { %>
             <tr>
                 <td><%= i + 1 %></td>
-                <td><%= todos[i] %></td>
+                <td><%= todos[i].item %></td>
                 <td>
-                    <form action="/" method="POST" style="display:inline" class="delete-form">
-                        <input type="hidden" name="deleteIndex" value="<%= i %>">
+                    <form action="/dashboard" method="POST" style="display:inline" class="delete-form">
+                        <input type="hidden" name="deleteIndex" value="<%= todos[i].id %>">
                         <button type="submit" class="del-btn">Delete</button>
                     </form>
                 </td>
@@ -43,7 +48,7 @@
     </table>
 </div>
 
-<form action="/" method="POST" class="add-form">
+<form action="/dashboard" method="POST" class="add-form">
     <label>
         <input type="text" name="todo" placeholder="Add a todo">
     </label>
