@@ -10,11 +10,14 @@
 
 <div class="register-header">
 <h2>Log In</h2>
+
        
 	     <div class="register_form">
 		  
 		  <div>
-	
+			<% if(locals.err_msg) { %>
+				<div class="alert alert-danger" role="alert"><%= err_msg %></div>
+				<% } %>
 		<form  action="/login" method="POST" >
 
 		<input type="email" id="email" name="email" placeholder="Email" required> <br>

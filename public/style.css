@@ -78,3 +78,11 @@ input{
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
+.alert{
+    background-color: orchid;
+    color:white;
+    position: relative;
+    width: auto;
+    height: auto;
+}

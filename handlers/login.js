@@ -19,8 +19,9 @@ module.exports = async function login(req, res) {
       if (password_valid) {
         req.session.userId = user.id;
 
-        return res.redirect("/");
+        return res.redirect("/",);
       } else {
+        
         return res.redirect("/login");
       }
     } else {

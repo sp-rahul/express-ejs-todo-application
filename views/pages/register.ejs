@@ -1,8 +1,10 @@
 <!DOCTYPE>
 <html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <title>Registation Form</title>
 <link rel="stylesheet" type="text/css" href="/style.css">
+
 </head>
 
 
@@ -10,10 +12,18 @@
 
 <div class="register-header">
 <h2>Registation</h2>
-       
+
+
+
+  
 	     <div class="register_form">
 		  
 		  <div>
+			
+
+			<% if(locals.err_msg) { %>
+				<div class="alert alert-danger" role="alert"><%= err_msg %></div>
+				<% } %>
 	
 		<form  action="/register" method="POST" >
 		
